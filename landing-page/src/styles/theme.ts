@@ -1,7 +1,7 @@
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import type { Theme, ThemeOptions } from "@mui/material/styles";
-import { TTNorms } from "./fonts";
+import { SalvatoreRoman } from "./fonts";
 
 const inputHeight = "36px"; // TODO this should be a theme variable
 
@@ -50,7 +50,7 @@ declare module "@mui/material/styles" {
   interface PaletteOptions extends CustomPalette {}
 }
 
-const fontFamily = TTNorms.style.fontFamily;
+const fontFamily = SalvatoreRoman.style.fontFamily;
 
 const dark = {
   primary: {
@@ -129,6 +129,7 @@ export const baseTheme: ThemeOptions = {
     fontFamily,
     h1: {
       fontSize: customPxToRem(40),
+      fontFamily: fontFamily,
     },
     h2: {
       fontSize: customPxToRem(28),

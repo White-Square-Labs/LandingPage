@@ -1,120 +1,91 @@
 "use client";
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Box, Typography } from "@mui/material";
+import LockIcon from "@mui/icons-material/Lock";
+import Link from "next/link";
 
-interface ProjectCard {
-  title: string;
-  description: string;
-  image: {
-    path: string;
-    alt: string;
-  };
-}
+// TODO: Setup theme properly
+// TODO: Use theme variables
+// TODO: Remove light/dark theme
+// TODO: Utilise SalvatoreRoman fonts
 
 export default function Home() {
-  const projects: ProjectCard[] = [
-    {
-      title: "White Vault",
-      description:
-        "A vault utilising ERC4626 that enables the deposit of ETH or WETH in return for WVT (White Vault Token). It capitalises on the Aave protocol.",
-      image: {
-        path: "/vault.jpg",
-        alt: "Vault",
-      },
-    },
-  ];
-
   return (
     <main>
-      <Box maxWidth={1200} mx="auto" px={2}>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          p={3}
-        >
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
-            py={4}
-          >
+      <Box
+        maxWidth={1200}
+        mx="auto"
+        px={2}
+        pb={4}
+        display="flex"
+        justifyContent="space-between"
+        flexDirection="column"
+        alignItems="center"
+        minHeight={"100vh"}
+      >
+        <Box>
+          <Box display="flex" alignItems="center" justifyContent="center">
             <Box
-              sx={{ height: 100, width: 100, border: "3px solid black" }}
-            ></Box>
-            <Typography variant="h1" my={3} textAlign="center" fontSize={32}>
-              White Square
-              <Box component="span" my={0.5} display="block" fontSize={24}>
-                Labs
-              </Box>
-            </Typography>
+              component="img"
+              alt="logo"
+              src="./logo.png"
+              height={{ xs: 150, sm: 250 }}
+              width={{ xs: 320, sm: 550 }}
+            />
+          </Box>
+          <Box
+            px={2}
+            display="flex"
+            flexDirection={{ xs: "column", sm: "row" }}
+            flexWrap="wrap"
+            sx={{ borderTop: "1px solid white", paddingTop: 4 }}
+          >
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Typography
+                variant="body1"
+                display="flex"
+                alignItems="center"
+                sx={{
+                  color: "white",
+                  textTransform: "uppercase",
+                  fontWeight: 600,
+                }}
+              >
+                <LockIcon sx={{ marginRight: 1 }} />
+                White Vault
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: "#999", marginTop: 1, maxWidth: "650px" }}
+              >
+                A vault utilising ERC4626 that enables the deposit of ETH or
+                WETH in return for WVT (White Vault Token). It capitalises on
+                the Aave protocol.
+              </Typography>
+            </Link>
           </Box>
         </Box>
-        <Typography
-          variant="h2"
-          my={3}
-          fontSize={20}
-          fontWeight={500}
-          sx={{ textDecoration: "underline " }}
-        >
-          Projects
+        <Typography variant="body2" sx={{ color: "#999", textAlign: "center" }}>
+          White Square Labs. Building DeFi from the ground up. An experiment by{" "}
+          <Box component="span" sx={{ display: "block" }}>
+            <Link
+              href="https://twitter.com/solidoracle"
+              target="_blank"
+              style={{ color: "white" }}
+            >
+              🔮 solidoracle
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://twitter.com/woodelliot"
+              target="_blank"
+              style={{ color: "white" }}
+            >
+              woodelliot
+            </Link>
+            .
+          </Box>
         </Typography>
-        <Box
-          my={6}
-          display="flex"
-          flexDirection={{ xs: "column", sm: "row" }}
-          flexWrap="wrap"
-          gap={6}
-        >
-          {projects.map(({ title, description, image }, id) => (
-            <ProjectCard
-              key={id}
-              title={title}
-              description={description}
-              image={image}
-            />
-          ))}
-        </Box>
       </Box>
     </main>
   );
 }
-
-const ProjectCard = ({ title, description, image }: ProjectCard) => {
-  return (
-    <Card sx={{ width: 320, border: "1px solid black" }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={image.path}
-          alt={image.alt}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary" endIcon={<ArrowForwardIcon />}>
-          View project
-        </Button>
-      </CardActions>
-    </Card>
-  );
-};
