@@ -65,14 +65,14 @@ export default function Home() {
           </Box>
         </Box>
         <Typography variant="body2" sx={{ color: "#999", textAlign: "center" }}>
-          White Square Labs. Building DeFi from the ground up. An experiment by{" "}
+          White Square Labs. An experiment by{" "}
           <Box component="span" sx={{ display: "block" }}>
             <Link
               href="https://twitter.com/solidoracle"
               target="_blank"
               style={{ color: "white" }}
             >
-              🔮 solidoracle
+              solidoracle
             </Link>{" "}
             and{" "}
             <Link
