@@ -39,7 +39,10 @@ export default function Home() {
             flexWrap="wrap"
             sx={{ borderTop: "1px solid white", paddingTop: 4 }}
           >
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link
+              href="/"
+              style={{ textDecoration: "none", cursor: "not-allowed" }}
+            >
               <Typography
                 variant="body1"
                 display="flex"
