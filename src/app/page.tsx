@@ -28,8 +28,10 @@ export default function Home() {
               component="img"
               alt="logo"
               src="./logo.png"
-              height={{ xs: 150, sm: 250 }}
+              height={{ xs: "auto", sm: "auto" }}
               width={{ xs: 320, sm: 550 }}
+              px={2}
+              py={{ xs: 4, sm: 6 }}
             />
           </Box>
           <Box
@@ -68,25 +70,23 @@ export default function Home() {
           </Box>
         </Box>
         <Typography variant="body2" sx={{ color: "#999", textAlign: "center" }}>
-          White Square Labs. An experiment by{" "}
-          <Box component="span" sx={{ display: "block" }}>
-            <Link
-              href="https://twitter.com/solidoracle"
-              target="_blank"
-              style={{ color: "white" }}
-            >
-              solidoracle
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="https://twitter.com/woodelliot"
-              target="_blank"
-              style={{ color: "white" }}
-            >
-              woodelliot
-            </Link>
-            .
-          </Box>
+          An experiment by{" "}
+          <Link
+            href="https://twitter.com/solidoracle"
+            target="_blank"
+            style={{ color: "white" }}
+          >
+            solidoracle
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://twitter.com/woodelliot"
+            target="_blank"
+            style={{ color: "white" }}
+          >
+            woodelliot
+          </Link>
+          .
         </Typography>
       </Box>
     </main>
