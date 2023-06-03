@@ -3,10 +3,10 @@ import { Box, Typography } from "@mui/material";
 import LockIcon from "@mui/icons-material/Lock";
 import Link from "next/link";
 
-// TODO: Setup theme properly
-// TODO: Use theme variables
-// TODO: Remove light/dark theme
-// TODO: Utilise SalvatoreRoman fonts
+// TODO: Setup theme properly.
+// TODO: Use theme variables.
+// TODO: Remove light/dark theme.
+// TODO: Utilise SalvatoreRoman fonts.
 
 export default function Home() {
   return (
