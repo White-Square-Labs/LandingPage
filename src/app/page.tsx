@@ -86,7 +86,7 @@ export default function Home() {
           >
             woodelliot
           </Link>
-          .
+          ...
         </Typography>
       </Box>
     </main>
