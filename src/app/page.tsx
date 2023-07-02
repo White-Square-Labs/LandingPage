@@ -42,8 +42,9 @@ export default function Home() {
             sx={{ borderTop: "1px solid white", paddingTop: 4 }}
           >
             <Link
-              href="/"
-              style={{ textDecoration: "none", cursor: "not-allowed" }}
+              href="https://white-vault.vercel.app/"
+              target="_blank"
+              style={{ textDecoration: "none" }}
             >
               <Typography
                 variant="body1"
