@@ -46,6 +46,49 @@ export default function Home() {
               target="_blank"
               style={{ textDecoration: "none" }}
             >
+              <Box display="flex" alignItems="center">
+                <Box
+                  sx={{
+                    border: "2px solid white",
+                    height: "20px",
+                    width: "20px",
+                    marginRight: 1,
+                  }}
+                />
+                <Typography
+                  variant="body1"
+                  display="flex"
+                  alignItems="center"
+                  sx={{
+                    color: "white",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                  }}
+                >
+                  White Vault
+                </Typography>
+              </Box>
+              <Typography
+                variant="body2"
+                sx={{ color: "#999", marginTop: 1, maxWidth: "650px" }}
+              >
+                A vault utilising ERC4626 that enables the deposit of ETH or
+                WETH in return for WVT (White Vault Token). It capitalises on
+                the Aave protocol.
+              </Typography>
+            </Link>
+          </Box>
+          <Box
+            px={2}
+            display="flex"
+            flexDirection={{ xs: "column", sm: "row" }}
+            flexWrap="wrap"
+            sx={{ paddingTop: 4 }}
+          >
+            <Link
+              href="/"
+              style={{ textDecoration: "none", cursor: "not-allowed" }}
+            >
               <Typography
                 variant="body1"
                 display="flex"
@@ -57,21 +100,20 @@ export default function Home() {
                 }}
               >
                 <LockIcon sx={{ marginRight: 1 }} />
-                White Vault
+                White Bank
               </Typography>
               <Typography
                 variant="body2"
                 sx={{ color: "#999", marginTop: 1, maxWidth: "650px" }}
               >
-                A vault utilising ERC4626 that enables the deposit of ETH or
-                WETH in return for WVT (White Vault Token). It capitalises on
-                the Aave protocol.
+                A NeoBank powered by blockchain with a seamless web2 onboarding
+                experience.
               </Typography>
             </Link>
           </Box>
         </Box>
         <Typography variant="body2" sx={{ color: "#999", textAlign: "center" }}>
-          An experiment by{" "}
+          DeFi research and development firm, by{" "}
           <Link
             href="https://twitter.com/solidoracle"
             target="_blank"
