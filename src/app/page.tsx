@@ -89,19 +89,23 @@ export default function Home() {
               href="/"
               style={{ textDecoration: "none", cursor: "not-allowed" }}
             >
-              <Typography
-                variant="body1"
-                display="flex"
-                alignItems="center"
-                sx={{
-                  color: "white",
-                  textTransform: "uppercase",
-                  fontWeight: 600,
-                }}
-              >
-                <LockIcon sx={{ marginRight: 1 }} />
-                White Bank
-              </Typography>
+              <Box display="flex" alignItems="center">
+                <Typography
+                  variant="body1"
+                  display="flex"
+                  alignItems="center"
+                  sx={{
+                    color: "white",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                  }}
+                >
+                  <LockIcon
+                    sx={{ marginRight: 1, height: "22px", width: "22px" }}
+                  />
+                  White Bank
+                </Typography>
+              </Box>
               <Typography
                 variant="body2"
                 sx={{ color: "#999", marginTop: 1, maxWidth: "650px" }}
@@ -113,7 +117,7 @@ export default function Home() {
           </Box>
         </Box>
         <Typography variant="body2" sx={{ color: "#999", textAlign: "center" }}>
-          DeFi research and development firm, by{" "}
+          DeFi research and development, by{" "}
           <Link
             href="https://twitter.com/solidoracle"
             target="_blank"
