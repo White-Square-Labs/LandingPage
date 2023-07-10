@@ -103,15 +103,14 @@ export default function Home() {
                   <LockIcon
                     sx={{ marginRight: 1, height: "22px", width: "22px" }}
                   />
-                  White Bank
+                  White Protocol
                 </Typography>
               </Box>
               <Typography
                 variant="body2"
                 sx={{ color: "#999", marginTop: 1, maxWidth: "650px" }}
               >
-                A NeoBank powered by blockchain with a seamless web2 onboarding
-                experience.
+                Effortless money everywhere.
               </Typography>
             </Link>
           </Box>
