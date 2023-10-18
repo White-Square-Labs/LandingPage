@@ -86,8 +86,9 @@ export default function Home() {
             sx={{ paddingTop: 4 }}
           >
             <Link
-              href="/"
-              style={{ textDecoration: "none", cursor: "not-allowed" }}
+              href="https://una.money/"
+              target="_blank"
+              style={{ textDecoration: "none" }}
             >
               <Box display="flex" alignItems="center">
                 <Typography
@@ -100,10 +101,7 @@ export default function Home() {
                     fontWeight: 600,
                   }}
                 >
-                  <LockIcon
-                    sx={{ marginRight: 1, height: "22px", width: "22px" }}
-                  />
-                  White Protocol
+                  Una Money
                 </Typography>
               </Box>
               <Typography
